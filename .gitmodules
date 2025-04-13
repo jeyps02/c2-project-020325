@@ -1,0 +1,3 @@
+[submodule "src/scenes/sign-in-up-page"]
+    path = src/scenes/sign-in-up-page
+    url = <url>

@@ -1,0 +1,62 @@
+C2 Terminal Commands Starter Pack
+
+node.js 18 something LTS version
+winget install Schniz.fnm
+fnm install 18
+# Verify the Node.js version:
+node -v # Should print "v18.20.7".
+# Verify npm version:
+npm -v # Should print "10.8.2".
+
+____________________________________________
+
+After matapos:
+
+fnm list
+
+fnm use 18
+
+(Optional tong default, pag nag default if gumawa ka ulit in the future, node.js 18th version gagamitin niya)
+fnm default 18
+
+(ito naman pag itong folder lang)
+fnm use 18 --local
+
+node -v
+(v18.20.7) dapat
+
+____________________________________________
+
+pag sa fnm list palang may error na try this:
+
+fnm env --use-on-cd | Out-String | Invoke-Expression
+
+fnm use 18
+
+echo 'fnm env --use-on-cd | Out-String | Invoke-Expression' >> $PROFILE
+
+then restart mo yung VScode/PC
+
+fnm use 18
+node -v
+(dapat v18... na yung lalabas)
+__________________________________________________
+
+npm i @mui/material @emotion/react @emotion/styled @mui/x-data-grid @mui/icons-material react-router-dom@6 react-pro-sidebar@0.7.1 formik yup @fullcalendar/core @fullcalendar/daygrid @fullcalendar/timegrid @fullcalendar/list @nivo/core @nivo/pie @nivo/line @nivo/bar @nivo/geo --legacy-peer-deps
+
+
+npm start
+
+(pag may issue try mo delete and reinstall yung node_modules at package-lock.json)
+
+Remove-Item -Recurse -Force node_modules
+Remove-Item -Force package-lock.json
+
+(pag di gumana yan delete mo na lang folder mano mano, tas restart VSCode)
+
+npm cache clean --force
+
+npm install --legacy-peer-deps
+
+npm start
+
